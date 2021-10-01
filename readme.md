@@ -1,6 +1,6 @@
 # <img src="/src/icon.png" height="30px"> Verify.MicrosoftLogging
 
-[![Build status](https://ci.appveyor.com/api/projects/status/eedjhmx5o3082tyq?svg=true)](https://ci.appveyor.com/project/SimonCropp/verify-verify-microsoftlogging)
+[![Build status](https://ci.appveyor.com/api/projects/status/nrbwjnwp2id3k7f8?svg=true)](https://ci.appveyor.com/project/SimonCropp/verify-verify-microsoftlogging)
 [![NuGet Status](https://img.shields.io/nuget/v/Verify.MicrosoftLogging.svg)](https://www.nuget.org/packages/Verify.MicrosoftLogging/)
 
 Extends [Verify](https://github.com/VerifyTests/Verify) to allow verification of MicrosoftLogging bits.
@@ -159,4 +159,4 @@ Results in:
 
 ## Icon
 
-[Spider](https://thenounproject.com/term/spider/904683/) designed by [marialuisa iborra](https://thenounproject.com/marialuisa.iborra/) from [The Noun Project](https://thenounproject.com/creativepriyanka).
+[Log](https://thenounproject.com/term/log/324064/) designed by [Ben Davis](https://thenounproject.com/smashicons/) from [The Noun Project](https://thenounproject.com).
