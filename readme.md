@@ -16,7 +16,7 @@ https://nuget.org/packages/Verify.Verify.MicrosoftLogging/
 
 ## Usage
 
-Enable VerifyHttp once at assembly load time:
+Enable once at assembly load time:
 
 <!-- snippet: Enable -->
 <a id='snippet-enable'></a>
