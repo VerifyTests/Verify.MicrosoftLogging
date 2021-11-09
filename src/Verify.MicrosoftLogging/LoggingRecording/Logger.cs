@@ -15,7 +15,8 @@ class Logger :
         this.provider = provider;
     }
 
-    public void Log<TState>(LogLevel level, EventId eventId, TState state, Exception? exception, Func<TState?, Exception?, string> formatter)
+
+    public void Log<TState>(LogLevel level, EventId eventId, TState state, Exception? exception, Func<TState, Exception?, string> formatter)
     {
         provider.AddEntry(level, category, eventId, state, exception, formatter);
     }

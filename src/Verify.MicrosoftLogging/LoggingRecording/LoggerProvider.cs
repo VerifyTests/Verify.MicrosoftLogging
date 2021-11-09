@@ -30,7 +30,7 @@ public class LoggerProvider :
         return new Logger<T>(level, this);
     }
 
-    internal void AddEntry<TState>(LogLevel? level, string? category, EventId eventId, TState? state, Exception? exception, Func<TState?, Exception?, string> formatter)
+    internal void AddEntry<TState>(LogLevel? level, string? category, EventId eventId, TState state, Exception? exception, Func<TState, Exception?, string> formatter)
     {
         if (level != null && !(level >= this.level))
         {
@@ -49,7 +49,7 @@ public class LoggerProvider :
         entries.Enqueue(entry);
     }
 
-    public void Log<TState>(LogLevel level, EventId eventId, TState state, Exception? exception, Func<TState?, Exception?, string> formatter)
+    public void Log<TState>(LogLevel level, EventId eventId, TState state, Exception? exception, Func<TState, Exception?, string> formatter)
     {
         defaultLogger.Log(level, eventId, state, exception, formatter);
     }
