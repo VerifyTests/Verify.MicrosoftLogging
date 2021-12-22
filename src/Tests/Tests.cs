@@ -17,7 +17,7 @@ public class Tests
 
         var result = target.Method();
 
-        return Verifier.Verify(result);
+        return Verify(result);
     }
 
     class ClassThatUsesTypedLogging
@@ -48,7 +48,7 @@ public class Tests
             provider.Log(LogLevel.Warning, default, new StateObject("Value3"), null, (_, _) => "Entry in scope");
         }
 
-        return Verifier.Verify("Foo");
+        return Verify("Foo");
     }
 
     class StateObject
@@ -71,7 +71,7 @@ public class Tests
 
         var result = target.Method();
 
-        return Verifier.Verify(result);
+        return Verify(result);
     }
 
     class ClassThatUsesLogging
