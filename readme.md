@@ -42,7 +42,7 @@ public Task Logging()
 
     var result = target.Method();
 
-    return Verifier.Verify(result);
+    return Verify(result);
 }
 
 class ClassThatUsesLogging
@@ -115,7 +115,7 @@ public Task LoggingTyped()
 
     var result = target.Method();
 
-    return Verifier.Verify(result);
+    return Verify(result);
 }
 
 class ClassThatUsesTypedLogging
