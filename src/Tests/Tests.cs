@@ -1,7 +1,4 @@
 ﻿using Microsoft.Extensions.Logging;
-using VerifyTests;
-using VerifyXunit;
-using Xunit;
 
 [UsesVerify]
 public class Tests
