@@ -15,15 +15,11 @@ class Logger :
     }
 
 
-    public void Log<TState>(LogLevel level, EventId eventId, TState state, Exception? exception, Func<TState, Exception?, string> formatter)
-    {
+    public void Log<TState>(LogLevel level, EventId eventId, TState state, Exception? exception, Func<TState, Exception?, string> formatter) =>
         provider.AddEntry(level, category, eventId, state, exception, formatter);
-    }
 
-    public bool IsEnabled(LogLevel level)
-    {
-        return level >= this.level;
-    }
+    public bool IsEnabled(LogLevel level) =>
+        level >= this.level;
 
     public IDisposable BeginScope<TState>(TState state)
     {

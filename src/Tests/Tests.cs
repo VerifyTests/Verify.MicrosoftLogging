@@ -21,10 +21,8 @@ public class Tests
     {
         ILogger<ClassThatUsesTypedLogging> logger;
 
-        public ClassThatUsesTypedLogging(ILogger<ClassThatUsesTypedLogging> logger)
-        {
+        public ClassThatUsesTypedLogging(ILogger<ClassThatUsesTypedLogging> logger) =>
             this.logger = logger;
-        }
 
         public string Method()
         {
@@ -52,10 +50,8 @@ public class Tests
     {
         public string Property { get; }
 
-        public StateObject(string property)
-        {
+        public StateObject(string property) =>
             Property = property;
-        }
     }
 
     #region LoggerRecording
@@ -75,10 +71,8 @@ public class Tests
     {
         ILogger logger;
 
-        public ClassThatUsesLogging(ILogger logger)
-        {
+        public ClassThatUsesLogging(ILogger logger) =>
             this.logger = logger;
-        }
 
         public string Method()
         {

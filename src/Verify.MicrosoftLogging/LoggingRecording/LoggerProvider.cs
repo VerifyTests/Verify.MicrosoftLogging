@@ -20,15 +20,11 @@ public class LoggerProvider :
     {
     }
 
-    public ILogger CreateLogger(string category)
-    {
-        return new Logger(category, level, this);
-    }
+    public ILogger CreateLogger(string category) =>
+        new Logger(category, level, this);
 
-    public ILogger<T> CreateLogger<T>()
-    {
-        return new Logger<T>(level, this);
-    }
+    public ILogger<T> CreateLogger<T>() =>
+        new Logger<T>(level, this);
 
     internal void AddEntry<TState>(LogLevel? level, string? category, EventId eventId, TState state, Exception? exception, Func<TState, Exception?, string> formatter)
     {
@@ -49,28 +45,18 @@ public class LoggerProvider :
         entries.Enqueue(entry);
     }
 
-    public void Log<TState>(LogLevel level, EventId eventId, TState state, Exception? exception, Func<TState, Exception?, string> formatter)
-    {
+    public void Log<TState>(LogLevel level, EventId eventId, TState state, Exception? exception, Func<TState, Exception?, string> formatter) =>
         defaultLogger.Log(level, eventId, state, exception, formatter);
-    }
 
-    public bool IsEnabled(LogLevel level)
-    {
-        return defaultLogger.IsEnabled(level);
-    }
+    public bool IsEnabled(LogLevel level) =>
+        defaultLogger.IsEnabled(level);
 
-    public IDisposable BeginScope<TState>(TState state)
-    {
-        return defaultLogger.BeginScope(state);
-    }
+    public IDisposable BeginScope<TState>(TState state) =>
+        defaultLogger.BeginScope(state);
 
-    internal void EndScope()
-    {
+    internal void EndScope() =>
         entries.Enqueue(new ScopeEntry("EndScope", null));
-    }
 
-    internal void StartScope<TState>(TState state)
-    {
+    internal void StartScope<TState>(TState state) =>
         entries.Enqueue(new ScopeEntry("StartScope", state!));
-    }
 }

@@ -3,13 +3,9 @@
 {
     Action log;
 
-    public LoggerScope(Action log)
-    {
+    public LoggerScope(Action log) =>
         this.log = log;
-    }
 
-    public void Dispose()
-    {
+    public void Dispose() =>
         log();
-    }
 }

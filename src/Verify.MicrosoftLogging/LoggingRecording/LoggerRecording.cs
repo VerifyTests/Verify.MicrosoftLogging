@@ -6,10 +6,8 @@ public static class LoggerRecording
 {
     static AsyncLocal<LoggerProvider?> local = new();
 
-    public static LoggerProvider Start(LogLevel logLevel = LogLevel.Information)
-    {
-        return local.Value = new(logLevel);
-    }
+    public static LoggerProvider Start(LogLevel logLevel = LogLevel.Information) =>
+        local.Value = new(logLevel);
 
     public static bool TryFinishRecording(out IEnumerable<object>? entries)
     {

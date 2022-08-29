@@ -2,8 +2,7 @@
 
 public static class VerifyMicrosoftLogging
 {
-    public static void Enable()
-    {
+    public static void Enable() =>
         VerifierSettings.RegisterJsonAppender(_ =>
         {
             if (!LoggerRecording.TryFinishRecording(out var entries))
@@ -13,5 +12,4 @@ public static class VerifyMicrosoftLogging
 
             return new("logs", entries!);
         });
-    }
 }

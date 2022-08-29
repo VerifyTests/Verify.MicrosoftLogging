@@ -1,20 +1,12 @@
 ﻿public static class ModuleInitializer
 {
+    #region Enable
+
     [ModuleInitializer]
     public static void Initialize()
-    {
-        #region Enable
-        VerifyMicrosoftLogging.Enable();
-        #endregion
-    }
-}
+       { VerifyMicrosoftLogging.Enable();
 
-#if(NET48)
-namespace System.Runtime.CompilerServices
-{
-    [AttributeUsage(AttributeTargets.Method, Inherited = false)]
-    public sealed class ModuleInitializerAttribute : Attribute
-    {
-    }
+    #endregion
+        VerifyDiffPlex.Initialize();
+       }
 }
-#endif
