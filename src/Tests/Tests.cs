@@ -1,6 +1,4 @@
-﻿using Microsoft.Extensions.Logging;
-
-[UsesVerify]
+﻿[UsesVerify]
 public class Tests
 {
     #region LoggerRecordingTyped

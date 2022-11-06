@@ -4,9 +4,11 @@
 
     [ModuleInitializer]
     public static void Initialize()
-       { VerifyMicrosoftLogging.Enable();
+    {
+        VerifyMicrosoftLogging.Enable();
 
-    #endregion
+        #endregion
+
         VerifyDiffPlex.Initialize();
-       }
+    }
 }

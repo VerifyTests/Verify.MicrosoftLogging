@@ -1,6 +1,4 @@
-﻿using Microsoft.Extensions.Logging;
-
-class Logger :
+﻿class Logger :
     ILogger
 {
     string? category;

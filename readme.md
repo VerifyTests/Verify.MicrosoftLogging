@@ -1,6 +1,6 @@
 # <img src="/src/icon.png" height="30px"> Verify.MicrosoftLogging
 
-[![Build status](https://ci.appveyor.com/api/projects/status/nrbwjnwp2id3k7f8?svg=true)](https://ci.appveyor.com/project/SimonCropp/verify-verify-microsoftlogging)
+[![Build status](https://ci.appveyor.com/api/projects/status/nrbwjnwp2id3k7f8?svg=true)](https://ci.appveyor.com/project/SimonCropp/verify-microsoftlogging)
 [![NuGet Status](https://img.shields.io/nuget/v/Verify.MicrosoftLogging.svg)](https://www.nuget.org/packages/Verify.MicrosoftLogging/)
 
 Extends [Verify](https://github.com/VerifyTests/Verify) to allow verification of MicrosoftLogging bits.
@@ -19,9 +19,10 @@ https://nuget.org/packages/Verify.Verify.MicrosoftLogging/
 ```cs
 [ModuleInitializer]
 public static void Initialize()
-   { VerifyMicrosoftLogging.Enable();
+{
+    VerifyMicrosoftLogging.Enable();
 ```
-<sup><a href='/src/Tests/ModuleInitializer.cs#L3-L9' title='Snippet source file'>snippet source</a> | <a href='#snippet-enable' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/ModuleInitializer.cs#L3-L10' title='Snippet source file'>snippet source</a> | <a href='#snippet-enable' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 Logging Recording allows, when a method is being tested, for any [logging](https://docs.microsoft.com/en-us/dotnet/core/extensions/logging) made as part of that method call to be recorded and verified.
 
@@ -62,7 +63,7 @@ class ClassThatUsesLogging
     }
 }
 ```
-<sup><a href='/src/Tests/Tests.cs#L57-L89' title='Snippet source file'>snippet source</a> | <a href='#snippet-loggerrecording' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Tests.cs#L55-L87' title='Snippet source file'>snippet source</a> | <a href='#snippet-loggerrecording' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 Results in:
@@ -128,7 +129,7 @@ class ClassThatUsesTypedLogging
     }
 }
 ```
-<sup><a href='/src/Tests/Tests.cs#L6-L34' title='Snippet source file'>snippet source</a> | <a href='#snippet-loggerrecordingtyped' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Tests.cs#L4-L32' title='Snippet source file'>snippet source</a> | <a href='#snippet-loggerrecordingtyped' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 Results in:

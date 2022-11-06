@@ -1,6 +1,4 @@
-﻿using Microsoft.Extensions.Logging;
-
-class LogItem
+﻿class LogItem
 {
     public LogLevel? Level { get; }
     public string? Category { get; }
