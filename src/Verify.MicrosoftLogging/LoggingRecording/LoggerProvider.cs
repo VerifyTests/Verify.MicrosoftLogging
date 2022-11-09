@@ -49,7 +49,8 @@ public class LoggerProvider :
     public bool IsEnabled(LogLevel level) =>
         defaultLogger.IsEnabled(level);
 
-    public IDisposable BeginScope<TState>(TState state) =>
+    public IDisposable? BeginScope<TState>(TState state)
+        where TState : notnull =>
         defaultLogger.BeginScope(state);
 
     internal void EndScope() =>
