@@ -5,7 +5,7 @@
     {
         writer.WriteStartObject();
         writer.WritePropertyName(item.Level.ToString());
-        writer.WriteRawValueIfNoStrict(item.Message);
+        writer.WriteValue(item.Message);
         writer.WriteMember(item, item.Category, "Category");
         if (item.EventId.Id != 0)
         {
