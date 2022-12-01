@@ -75,16 +75,14 @@ Results in:
   target: result,
   logs: [
     {
-      Level: Warning,
-      Message: The log entry
+      Warning: The log entry
     },
     {
       Message: StartScope,
       State: The scope
     },
     {
-      Level: Warning,
-      Message: Entry in scope
+      Warning: Entry in scope
     },
     {
       Message: EndScope
@@ -92,7 +90,7 @@ Results in:
   ]
 }
 ```
-<sup><a href='/src/Tests/Tests.Logging.verified.txt#L1-L20' title='Snippet source file'>snippet source</a> | <a href='#snippet-Tests.Logging.verified.txt' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Tests.Logging.verified.txt#L1-L18' title='Snippet source file'>snippet source</a> | <a href='#snippet-Tests.Logging.verified.txt' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
@@ -141,14 +139,13 @@ Results in:
   target: result,
   logs: [
     {
-      Level: Warning,
-      Category: ClassThatUsesTypedLogging,
-      Message: The log entry
+      Warning: The log entry,
+      Category: ClassThatUsesTypedLogging
     }
   ]
 }
 ```
-<sup><a href='/src/Tests/Tests.LoggingTyped.verified.txt#L1-L10' title='Snippet source file'>snippet source</a> | <a href='#snippet-Tests.LoggingTyped.verified.txt' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Tests.LoggingTyped.verified.txt#L1-L9' title='Snippet source file'>snippet source</a> | <a href='#snippet-Tests.LoggingTyped.verified.txt' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
