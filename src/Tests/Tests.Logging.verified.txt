@@ -2,16 +2,14 @@
   target: result,
   logs: [
     {
-      Level: Warning,
-      Message: The log entry
+      Warning: The log entry
     },
     {
       Message: StartScope,
       State: The scope
     },
     {
-      Level: Warning,
-      Message: Entry in scope
+      Warning: Entry in scope
     },
     {
       Message: EndScope

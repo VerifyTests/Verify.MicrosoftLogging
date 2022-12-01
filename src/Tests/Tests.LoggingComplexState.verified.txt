@@ -2,8 +2,7 @@
   target: Foo,
   logs: [
     {
-      Level: Warning,
-      Message: The Message,
+      Warning: The Message,
       State: {
         Property: Value1
       }
@@ -15,8 +14,7 @@
       }
     },
     {
-      Level: Warning,
-      Message: Entry in scope,
+      Warning: Entry in scope,
       State: {
         Property: Value3
       }

@@ -2,9 +2,8 @@
   target: result,
   logs: [
     {
-      Level: Warning,
-      Category: ClassThatUsesTypedLogging,
-      Message: The log entry
+      Warning: The log entry,
+      Category: ClassThatUsesTypedLogging
     }
   ]
 }

@@ -24,9 +24,9 @@ public class LoggerProvider :
     public ILogger<T> CreateLogger<T>() =>
         new Logger<T>(level, this);
 
-    internal void AddEntry<TState>(LogLevel? level, string? category, EventId eventId, TState state, Exception? exception, Func<TState, Exception?, string> formatter)
+    internal void AddEntry<TState>(LogLevel level, string? category, EventId eventId, TState state, Exception? exception, Func<TState, Exception?, string> formatter)
     {
-        if (level != null && !(level >= this.level))
+        if (level < this.level)
         {
             return;
         }
