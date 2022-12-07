@@ -4,7 +4,7 @@
     <NoWarn>CS1591;CS0649;CS8632</NoWarn>
     <Version>3.1.1</Version>
     <AssemblyVersion>1.0.0</AssemblyVersion>
-    <PackageTags>Http, Verify</PackageTags>
-    <Description>Extends Verify (https://github.com/VerifyTests/Verify) to allow verification of Http bits.</Description>
+    <PackageTags>Logging, Verify</PackageTags>
+    <Description>Extends Verify (https://github.com/VerifyTests/Verify) to allow verification of MicrosoftLogging bits.</Description>
   </PropertyGroup>
 </Project>
