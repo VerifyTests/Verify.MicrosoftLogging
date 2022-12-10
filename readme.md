@@ -9,7 +9,7 @@ Extends [Verify](https://github.com/VerifyTests/Verify) to allow verification of
 
 ## NuGet package
 
-https://nuget.org/packages/Verify.Verify.MicrosoftLogging/
+https://nuget.org/packages/Verify.MicrosoftLogging/
 
 
 ## Usage
