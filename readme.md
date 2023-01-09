@@ -18,11 +18,10 @@ https://nuget.org/packages/Verify.MicrosoftLogging/
 <a id='snippet-enable'></a>
 ```cs
 [ModuleInitializer]
-public static void Initialize()
-{
+public static void Initialize() =>
     VerifyMicrosoftLogging.Enable();
 ```
-<sup><a href='/src/Tests/ModuleInitializer.cs#L3-L10' title='Snippet source file'>snippet source</a> | <a href='#snippet-enable' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/ModuleInitializer.cs#L3-L9' title='Snippet source file'>snippet source</a> | <a href='#snippet-enable' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 Logging Recording allows, when a method is being tested, for any [logging](https://docs.microsoft.com/en-us/dotnet/core/extensions/logging) made as part of that method call to be recorded and verified.
 

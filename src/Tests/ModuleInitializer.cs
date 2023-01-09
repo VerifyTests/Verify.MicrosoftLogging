@@ -3,12 +3,12 @@
     #region Enable
 
     [ModuleInitializer]
-    public static void Initialize()
-    {
+    public static void Initialize() =>
         VerifyMicrosoftLogging.Enable();
 
-        #endregion
+    #endregion
 
+    [ModuleInitializer]
+    public static void InitializeOther() =>
         VerifyDiffPlex.Initialize();
-    }
 }
