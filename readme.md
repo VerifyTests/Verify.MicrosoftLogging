@@ -19,7 +19,7 @@ https://nuget.org/packages/Verify.MicrosoftLogging/
 ```cs
 [ModuleInitializer]
 public static void Initialize() =>
-    VerifyMicrosoftLogging.Enable();
+    VerifyMicrosoftLogging.Initialize();
 ```
 <sup><a href='/src/Tests/ModuleInitializer.cs#L3-L9' title='Snippet source file'>snippet source</a> | <a href='#snippet-enable' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
