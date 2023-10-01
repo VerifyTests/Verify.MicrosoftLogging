@@ -58,20 +58,15 @@ public class Tests
     public Task Logging()
     {
         var provider = LoggerRecording.Start();
-        ClassThatUsesLogging target = new(provider);
+        var target = new ClassThatUsesLogging(provider);
 
         var result = target.Method();
 
         return Verify(result);
     }
 
-    class ClassThatUsesLogging
+    class ClassThatUsesLogging(ILogger logger)
     {
-        ILogger logger;
-
-        public ClassThatUsesLogging(ILogger logger) =>
-            this.logger = logger;
-
         public string Method()
         {
             logger.LogWarning("The log entry");

@@ -1,16 +1,9 @@
-﻿class Logger :
+﻿class Logger(string? category, LogLevel level, LoggerProvider provider) :
     ILogger
 {
-    string? category;
-    LogLevel level;
-    LoggerProvider provider;
-
-    public Logger(string? category, LogLevel level, LoggerProvider provider)
-    {
-        this.category = category;
-        this.level = level;
-        this.provider = provider;
-    }
+    string? category = category;
+    LogLevel level = level;
+    LoggerProvider provider = provider;
 
     public void Log<TState>(LogLevel level, EventId eventId, TState state, Exception? exception, Func<TState, Exception?, string> formatter) =>
         provider.AddEntry(level, category, eventId, state, exception, formatter);

@@ -1,11 +1,5 @@
-﻿class ScopeEntry
+﻿class ScopeEntry(string message, object? state)
 {
-    public string Message { get; }
-    public object? State { get; }
-
-    public ScopeEntry(string message, object? state)
-    {
-        Message = message;
-        State = state;
-    }
+    public string Message { get; } = message;
+    public object? State { get; } = state;
 }

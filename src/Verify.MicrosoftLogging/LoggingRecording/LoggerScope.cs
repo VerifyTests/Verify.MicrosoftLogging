@@ -1,11 +1,6 @@
-﻿class LoggerScope :
+﻿class LoggerScope(Action log) :
     IDisposable
 {
-    Action log;
-
-    public LoggerScope(Action log) =>
-        this.log = log;
-
     public void Dispose() =>
         log();
 }

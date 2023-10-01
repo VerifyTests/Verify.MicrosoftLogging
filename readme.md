@@ -39,20 +39,15 @@ The pass in the `LoggerProvider` instance to a class/method that write log entri
 public Task Logging()
 {
     var provider = LoggerRecording.Start();
-    ClassThatUsesLogging target = new(provider);
+    var target = new ClassThatUsesLogging(provider);
 
     var result = target.Method();
 
     return Verify(result);
 }
 
-class ClassThatUsesLogging
+class ClassThatUsesLogging(ILogger logger)
 {
-    ILogger logger;
-
-    public ClassThatUsesLogging(ILogger logger) =>
-        this.logger = logger;
-
     public string Method()
     {
         logger.LogWarning("The log entry");
@@ -65,7 +60,7 @@ class ClassThatUsesLogging
     }
 }
 ```
-<sup><a href='/src/Tests/Tests.cs#L55-L87' title='Snippet source file'>snippet source</a> | <a href='#snippet-loggerrecording' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Tests.cs#L55-L82' title='Snippet source file'>snippet source</a> | <a href='#snippet-loggerrecording' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 Results in:
