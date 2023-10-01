@@ -19,12 +19,6 @@
     }
 }
 
-class Logger<T> :
-    Logger,
-    ILogger<T>
-{
-    public Logger(LogLevel level, LoggerProvider provider) :
-        base(typeof(T).Name, level, provider)
-    {
-    }
-}
+class Logger<T>(LogLevel level, LoggerProvider provider) :
+    Logger(typeof(T).Name, level, provider),
+    ILogger<T>;
