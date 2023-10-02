@@ -60,7 +60,7 @@ class ClassThatUsesLogging(ILogger logger)
     }
 }
 ```
-<sup><a href='/src/Tests/Tests.cs#L50-L77' title='Snippet source file'>snippet source</a> | <a href='#snippet-loggerrecording' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Tests.cs#L47-L74' title='Snippet source file'>snippet source</a> | <a href='#snippet-loggerrecording' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 Results in:
