@@ -44,12 +44,9 @@ public class Tests
         return Verify("Foo");
     }
 
-    class StateObject
+    class StateObject(string property)
     {
-        public string Property { get; }
-
-        public StateObject(string property) =>
-            Property = property;
+        public string Property { get; } = property;
     }
 
     #region LoggerRecording
