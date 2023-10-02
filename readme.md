@@ -60,7 +60,7 @@ class ClassThatUsesLogging(ILogger logger)
     }
 }
 ```
-<sup><a href='/src/Tests/Tests.cs#L55-L82' title='Snippet source file'>snippet source</a> | <a href='#snippet-loggerrecording' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Tests.cs#L50-L77' title='Snippet source file'>snippet source</a> | <a href='#snippet-loggerrecording' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 Results in:
@@ -110,13 +110,8 @@ public Task LoggingTyped()
     return Verify(result);
 }
 
-class ClassThatUsesTypedLogging
+class ClassThatUsesTypedLogging(ILogger<ClassThatUsesTypedLogging> logger)
 {
-    ILogger<ClassThatUsesTypedLogging> logger;
-
-    public ClassThatUsesTypedLogging(ILogger<ClassThatUsesTypedLogging> logger) =>
-        this.logger = logger;
-
     public string Method()
     {
         logger.LogWarning("The log entry");
@@ -124,7 +119,7 @@ class ClassThatUsesTypedLogging
     }
 }
 ```
-<sup><a href='/src/Tests/Tests.cs#L4-L32' title='Snippet source file'>snippet source</a> | <a href='#snippet-loggerrecordingtyped' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Tests.cs#L4-L27' title='Snippet source file'>snippet source</a> | <a href='#snippet-loggerrecordingtyped' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 Results in:

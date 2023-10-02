@@ -1,4 +1,6 @@
-﻿record LogItem(
+﻿namespace VerifyTests.MicrosoftLogging;
+
+public record LogItem(
     LogLevel Level,
     string? Category,
     EventId EventId,

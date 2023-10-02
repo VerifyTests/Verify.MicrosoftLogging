@@ -1,4 +1,6 @@
-﻿class LogItemConverter :
+﻿using VerifyTests.MicrosoftLogging;
+
+class LogItemConverter :
     WriteOnlyJsonConverter<LogItem>
 {
     public override void Write(VerifyJsonWriter writer, LogItem item)

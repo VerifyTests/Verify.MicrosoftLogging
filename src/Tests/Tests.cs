@@ -15,13 +15,8 @@ public class Tests
         return Verify(result);
     }
 
-    class ClassThatUsesTypedLogging
+    class ClassThatUsesTypedLogging(ILogger<ClassThatUsesTypedLogging> logger)
     {
-        ILogger<ClassThatUsesTypedLogging> logger;
-
-        public ClassThatUsesTypedLogging(ILogger<ClassThatUsesTypedLogging> logger) =>
-            this.logger = logger;
-
         public string Method()
         {
             logger.LogWarning("The log entry");
