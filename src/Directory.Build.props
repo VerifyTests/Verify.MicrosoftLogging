@@ -7,5 +7,6 @@
     <LangVersion>preview</LangVersion>
     <PackageTags>Logging, Verify</PackageTags>
     <Description>Extends Verify (https://github.com/VerifyTests/Verify) to allow verification of MicrosoftLogging bits.</Description>
+    <ResolveAssemblyReferencesSilent>true</ResolveAssemblyReferencesSilent>
   </PropertyGroup>
 </Project>
