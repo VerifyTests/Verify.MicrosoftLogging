@@ -103,7 +103,7 @@ public Task LoggingTyped()
 {
     var provider = LoggerRecording.Start();
     var logger = provider.CreateLogger<ClassThatUsesTypedLogging>();
-    ClassThatUsesTypedLogging target = new(logger);
+    var target = new ClassThatUsesTypedLogging(logger);
 
     var result = target.Method();
 
