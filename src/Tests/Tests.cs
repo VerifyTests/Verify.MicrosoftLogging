@@ -33,11 +33,11 @@ public class Tests
     public Task LoggingComplexState()
     {
         Recording.Start();
-        var provider = new RecordingProvider();
-        provider.Log(LogLevel.Warning, default, new StateObject("Value1"), null, (_, _) => "The Message");
-        using (provider.BeginScope(new StateObject("Value2")))
+        var logger = new RecordingLogger();
+        logger.Log(LogLevel.Warning, default, new StateObject("Value1"), null, (_, _) => "The Message");
+        using (logger.BeginScope(new StateObject("Value2")))
         {
-            provider.Log(LogLevel.Warning, default, new StateObject("Value3"), null, (_, _) => "Entry in scope");
+            logger.Log(LogLevel.Warning, default, new StateObject("Value3"), null, (_, _) => "Entry in scope");
         }
 
         return Verify("Foo");
