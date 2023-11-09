@@ -1,8 +1,7 @@
 ﻿namespace VerifyTests.MicrosoftLogging;
 
-public class LoggerProvider :
-    ILoggerProvider,
-    ILogger
+public class RecordingProvider :
+    ILoggerProvider
 {
     Logger defaultLogger = new(null);
 

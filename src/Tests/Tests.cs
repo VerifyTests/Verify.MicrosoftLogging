@@ -1,4 +1,6 @@
-﻿[UsesVerify]
+﻿using VerifyTests.MicrosoftLogging;
+
+[UsesVerify]
 public class Tests
 {
     #region LoggerRecordingTyped
@@ -7,7 +9,7 @@ public class Tests
     public Task LoggingTyped()
     {
         Recording.Start();
-        var provider = LoggerRecording.Start();
+        var provider = new RecordingProvider();
         var logger = provider.CreateLogger<ClassThatUsesTypedLogging>();
         var target = new ClassThatUsesTypedLogging(logger);
 
@@ -31,7 +33,7 @@ public class Tests
     public Task LoggingComplexState()
     {
         Recording.Start();
-        var provider = LoggerRecording.Start();
+        var provider = new RecordingProvider();
         provider.Log(LogLevel.Warning, default, new StateObject("Value1"), null, (_, _) => "The Message");
         using (provider.BeginScope(new StateObject("Value2")))
         {
@@ -52,8 +54,8 @@ public class Tests
     public Task Logging()
     {
         Recording.Start();
-        var provider = LoggerRecording.Start();
-        var target = new ClassThatUsesLogging(provider);
+        var logger = new RecordingLogger();
+        var target = new ClassThatUsesLogging(logger);
 
         var result = target.Method();
 
