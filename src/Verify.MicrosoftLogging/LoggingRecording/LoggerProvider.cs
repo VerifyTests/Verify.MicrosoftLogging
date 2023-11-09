@@ -23,17 +23,21 @@ public class LoggerProvider :
     internal void AddEntry<TState>(LogLevel level, string? category, EventId eventId, TState state, Exception? exception, Func<TState, Exception?, string> formatter)
     {
         var message = formatter.Invoke(state, exception);
-        if (state is IReadOnlyList<KeyValuePair<string, object>> {Count: 1} dictionary &&
-            dictionary.First().Key == "{OriginalFormat}")
+        if (IsOriginalFormat(state))
         {
-            var entry1 = new LogItem(level, category, eventId, exception, message, null);
-            entries.Enqueue(entry1);
-            return;
+            var entry = new LogItem(level, category, eventId, exception, message, null);
+            entries.Enqueue(entry);
         }
-
-        var entry = new LogItem(level, category, eventId, exception, message, state);
-        entries.Enqueue(entry);
+        else
+        {
+            var entry = new LogItem(level, category, eventId, exception, message, state);
+            entries.Enqueue(entry);
+        }
     }
+
+    static bool IsOriginalFormat<TState>(TState state) =>
+        state is IReadOnlyList<KeyValuePair<string, object>> {Count: 1} dictionary &&
+        dictionary.First().Key == "{OriginalFormat}";
 
     public void Log<TState>(LogLevel level, EventId eventId, TState state, Exception? exception, Func<TState, Exception?, string> formatter) =>
         defaultLogger.Log(level, eventId, state, exception, formatter);
