@@ -26,11 +26,12 @@ public class LoggerProvider :
         if (state is IReadOnlyList<KeyValuePair<string, object>> {Count: 1} dictionary &&
             dictionary.First().Key == "{OriginalFormat}")
         {
-            LogItem entry1 = new(level, category, eventId, exception, message, null);
+            var entry1 = new LogItem(level, category, eventId, exception, message, null);
             entries.Enqueue(entry1);
             return;
         }
-        LogItem entry = new(level, category, eventId, exception, message, state);
+
+        var entry = new LogItem(level, category, eventId, exception, message, state);
         entries.Enqueue(entry);
     }
 
