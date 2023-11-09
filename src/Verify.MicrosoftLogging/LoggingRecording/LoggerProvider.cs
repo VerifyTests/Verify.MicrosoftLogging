@@ -1,6 +1,4 @@
-﻿using VerifyTests.MicrosoftLogging;
-
-namespace VerifyTests;
+﻿namespace VerifyTests;
 
 public class LoggerProvider :
     ILoggerProvider,
