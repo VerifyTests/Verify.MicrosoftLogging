@@ -6,33 +6,24 @@ public class LoggerProvider :
     ILoggerProvider,
     ILogger
 {
-    LogLevel level;
     internal ConcurrentQueue<object> entries = new();
     Logger defaultLogger;
 
-    public LoggerProvider(LogLevel level)
-    {
-        this.level = level;
-        defaultLogger = new(null, level, this);
-    }
+    public LoggerProvider() =>
+        defaultLogger = new(null, this);
 
     public void Dispose()
     {
     }
 
     public ILogger CreateLogger(string category) =>
-        new Logger(category, level, this);
+        new Logger(category, this);
 
     public ILogger<T> CreateLogger<T>() =>
-        new Logger<T>(level, this);
+        new Logger<T>(this);
 
     internal void AddEntry<TState>(LogLevel level, string? category, EventId eventId, TState state, Exception? exception, Func<TState, Exception?, string> formatter)
     {
-        if (level < this.level)
-        {
-            return;
-        }
-
         var message = formatter.Invoke(state, exception);
         if (state is IReadOnlyList<KeyValuePair<string, object>> {Count: 1} dictionary &&
             dictionary.First().Key == "{OriginalFormat}")
