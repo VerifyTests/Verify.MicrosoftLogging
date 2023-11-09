@@ -1,9 +1,6 @@
 ﻿class Logger(string? category, LoggerProvider provider) :
     ILogger
 {
-    string? category = category;
-    LoggerProvider provider = provider;
-
     public void Log<TState>(LogLevel level, EventId eventId, TState state, Exception? exception, Func<TState, Exception?, string> formatter) =>
         provider.AddEntry(level, category, eventId, state, exception, formatter);
 
@@ -14,7 +11,7 @@
         where TState : notnull
     {
         provider.StartScope(state);
-        return new LoggerScope(() => provider.EndScope());
+        return new LoggerScope(provider.EndScope);
     }
 }
 
