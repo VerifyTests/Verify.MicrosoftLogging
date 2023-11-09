@@ -4,7 +4,6 @@ public class LoggerProvider :
     ILoggerProvider,
     ILogger
 {
-    internal ConcurrentQueue<object> entries = new();
     Logger defaultLogger;
 
     public LoggerProvider() =>
@@ -26,12 +25,12 @@ public class LoggerProvider :
         if (IsOriginalFormat(state))
         {
             var entry = new LogItem(level, category, eventId, exception, message, null);
-            entries.Enqueue(entry);
+            Recording.Add("logs", entry);
         }
         else
         {
             var entry = new LogItem(level, category, eventId, exception, message, state);
-            entries.Enqueue(entry);
+            Recording.Add("logs", entry);
         }
     }
 
@@ -50,8 +49,8 @@ public class LoggerProvider :
         defaultLogger.BeginScope(state);
 
     internal void EndScope() =>
-        entries.Enqueue(new ScopeEntry("EndScope", null));
+        Recording.Add("logs", new ScopeEntry("EndScope", null));
 
     internal void StartScope<TState>(TState state) =>
-        entries.Enqueue(new ScopeEntry("StartScope", state!));
+        Recording.Add("logs", new ScopeEntry("StartScope", state!));
 }
