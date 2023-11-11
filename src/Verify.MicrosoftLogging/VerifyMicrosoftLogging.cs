@@ -19,14 +19,5 @@ public static class VerifyMicrosoftLogging
             var converters = settings.Converters;
             converters.Add(new LogItemConverter());
         });
-        VerifierSettings.RegisterJsonAppender(_ =>
-        {
-            if (!LoggerRecording.TryFinishRecording(out var entries))
-            {
-                return null;
-            }
-
-            return new("logs", entries!);
-        });
     }
 }

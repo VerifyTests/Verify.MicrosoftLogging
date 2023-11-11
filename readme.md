@@ -38,8 +38,9 @@ The pass in the `LoggerProvider` instance to a class/method that write log entri
 [Fact]
 public Task Logging()
 {
-    var provider = LoggerRecording.Start();
-    var target = new ClassThatUsesLogging(provider);
+    Recording.Start();
+    var logger = new RecordingLogger();
+    var target = new ClassThatUsesLogging(logger);
 
     var result = target.Method();
 
@@ -60,7 +61,7 @@ class ClassThatUsesLogging(ILogger logger)
     }
 }
 ```
-<sup><a href='/src/Tests/Tests.cs#L47-L74' title='Snippet source file'>snippet source</a> | <a href='#snippet-loggerrecording' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Tests.cs#L51-L79' title='Snippet source file'>snippet source</a> | <a href='#snippet-loggerrecording' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 Results in:
@@ -101,7 +102,8 @@ A common pattern is to use a type logger (`Logger<T>`). `LoggerProvider` provide
 [Fact]
 public Task LoggingTyped()
 {
-    var provider = LoggerRecording.Start();
+    Recording.Start();
+    var provider = new RecordingProvider();
     var logger = provider.CreateLogger<ClassThatUsesTypedLogging>();
     var target = new ClassThatUsesTypedLogging(logger);
 
@@ -119,7 +121,7 @@ class ClassThatUsesTypedLogging(ILogger<ClassThatUsesTypedLogging> logger)
     }
 }
 ```
-<sup><a href='/src/Tests/Tests.cs#L4-L27' title='Snippet source file'>snippet source</a> | <a href='#snippet-loggerrecordingtyped' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Tests.cs#L6-L30' title='Snippet source file'>snippet source</a> | <a href='#snippet-loggerrecordingtyped' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 Results in:
@@ -129,15 +131,13 @@ Results in:
 ```txt
 {
   target: result,
-  logs: [
-    {
-      Warning: The log entry,
-      Category: ClassThatUsesTypedLogging
-    }
-  ]
+  logs: {
+    Warning: The log entry,
+    Category: ClassThatUsesTypedLogging
+  }
 }
 ```
-<sup><a href='/src/Tests/Tests.LoggingTyped.verified.txt#L1-L9' title='Snippet source file'>snippet source</a> | <a href='#snippet-Tests.LoggingTyped.verified.txt' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Tests.LoggingTyped.verified.txt#L1-L7' title='Snippet source file'>snippet source</a> | <a href='#snippet-Tests.LoggingTyped.verified.txt' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 

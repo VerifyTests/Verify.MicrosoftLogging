@@ -1,9 +1,7 @@
 ﻿{
   target: result,
-  logs: [
-    {
-      Warning: The log entry,
-      Category: ClassThatUsesTypedLogging
-    }
-  ]
+  logs: {
+    Warning: The log entry,
+    Category: ClassThatUsesTypedLogging
+  }
 }
