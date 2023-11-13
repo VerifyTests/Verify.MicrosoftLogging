@@ -1,6 +1,6 @@
 ﻿{
   target: Foo,
-  logs: [
+  log: [
     {
       Warning: The Message,
       State: {

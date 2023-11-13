@@ -1,6 +1,6 @@
 ﻿{
   target: result,
-  logs: [
+  log: [
     {
       Warning: The log entry
     },

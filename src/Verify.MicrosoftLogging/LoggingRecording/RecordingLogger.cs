@@ -9,12 +9,12 @@ public class RecordingLogger(string? category = null) :
         if (IsOriginalFormat(state))
         {
             var entry = new LogItem(level, category, eventId, exception, message, null);
-            Recording.Add("logs", entry);
+            Recording.Add("log", entry);
         }
         else
         {
             var entry = new LogItem(level, category, eventId, exception, message, state);
-            Recording.Add("logs", entry);
+            Recording.Add("log", entry);
         }
     }
 
@@ -28,12 +28,12 @@ public class RecordingLogger(string? category = null) :
     public IDisposable BeginScope<TState>(TState state)
         where TState : notnull
     {
-        Recording.Add("logs", new ScopeEntry("StartScope", state));
+        Recording.Add("log", new ScopeEntry("StartScope", state));
         return new LoggerScope(EndScope);
     }
 
     static void EndScope() =>
-        Recording.Add("logs", new ScopeEntry("EndScope", null));
+        Recording.Add("log", new ScopeEntry("EndScope", null));
 }
 
 class RecordingLogger<T>() :
