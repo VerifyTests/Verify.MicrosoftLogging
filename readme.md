@@ -71,7 +71,7 @@ Results in:
 ```txt
 {
   target: result,
-  logs: [
+  log: [
     {
       Warning: The log entry
     },
@@ -131,7 +131,7 @@ Results in:
 ```txt
 {
   target: result,
-  logs: {
+  log: {
     Warning: The log entry,
     Category: ClassThatUsesTypedLogging
   }
