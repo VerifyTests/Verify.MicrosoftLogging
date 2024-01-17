@@ -60,7 +60,7 @@ class ClassThatUsesLogging(ILogger logger)
     }
 }
 ```
-<sup><a href='/src/Tests/Tests.cs#L51-L79' title='Snippet source file'>snippet source</a> | <a href='#snippet-loggerrecording' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Tests.cs#L50-L78' title='Snippet source file'>snippet source</a> | <a href='#snippet-loggerrecording' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 Results in:
@@ -120,7 +120,7 @@ class ClassThatUsesTypedLogging(ILogger<ClassThatUsesTypedLogging> logger)
     }
 }
 ```
-<sup><a href='/src/Tests/Tests.cs#L6-L30' title='Snippet source file'>snippet source</a> | <a href='#snippet-loggerrecordingtyped' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Tests.cs#L5-L29' title='Snippet source file'>snippet source</a> | <a href='#snippet-loggerrecordingtyped' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 Results in:
