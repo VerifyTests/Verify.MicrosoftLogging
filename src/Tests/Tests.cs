@@ -1,6 +1,5 @@
 ﻿using VerifyTests.MicrosoftLogging;
 
-[UsesVerify]
 public class Tests
 {
     #region LoggerRecordingTyped
