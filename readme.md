@@ -60,7 +60,7 @@ class ClassThatUsesLogging(ILogger logger)
     }
 }
 ```
-<sup><a href='/src/Tests/Tests.cs#L50-L78' title='Snippet source file'>snippet source</a> | <a href='#snippet-loggerrecording' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Tests.cs#L49-L77' title='Snippet source file'>snippet source</a> | <a href='#snippet-loggerrecording' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 Results in:
@@ -102,8 +102,7 @@ A common pattern is to use a type logger (`Logger<T>`). `LoggerProvider` provide
 public Task LoggingTyped()
 {
     Recording.Start();
-    var provider = new RecordingProvider();
-    var logger = provider.CreateLogger<ClassThatUsesTypedLogging>();
+    var logger = RecordingProvider.CreateLogger<ClassThatUsesTypedLogging>();
     var target = new ClassThatUsesTypedLogging(logger);
 
     var result = target.Method();
@@ -120,7 +119,7 @@ class ClassThatUsesTypedLogging(ILogger<ClassThatUsesTypedLogging> logger)
     }
 }
 ```
-<sup><a href='/src/Tests/Tests.cs#L5-L29' title='Snippet source file'>snippet source</a> | <a href='#snippet-loggerrecordingtyped' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Tests.cs#L5-L28' title='Snippet source file'>snippet source</a> | <a href='#snippet-loggerrecordingtyped' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 Results in:

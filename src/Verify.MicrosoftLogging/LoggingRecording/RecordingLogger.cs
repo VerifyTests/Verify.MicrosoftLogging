@@ -18,9 +18,15 @@ public class RecordingLogger(string? category = null) :
         }
     }
 
-    static bool IsOriginalFormat<TState>(TState state) =>
-        state is IReadOnlyList<KeyValuePair<string, object>> {Count: 1} dictionary &&
-        dictionary.First().Key == "{OriginalFormat}";
+    static bool IsOriginalFormat<TState>(TState state)
+    {
+        if (state is not IReadOnlyList<KeyValuePair<string, object>> {Count: 1} dictionary)
+        {
+            return false;
+        }
+
+        return dictionary[0].Key == "{OriginalFormat}";
+    }
 
     public bool IsEnabled(LogLevel level) =>
         true;

@@ -8,8 +8,7 @@ public class Tests
     public Task LoggingTyped()
     {
         Recording.Start();
-        var provider = new RecordingProvider();
-        var logger = provider.CreateLogger<ClassThatUsesTypedLogging>();
+        var logger = RecordingProvider.CreateLogger<ClassThatUsesTypedLogging>();
         var target = new ClassThatUsesTypedLogging(logger);
 
         var result = target.Method();

@@ -10,6 +10,6 @@ public class RecordingProvider :
     public ILogger CreateLogger(string category) =>
         new RecordingLogger(category);
 
-    public ILogger<T> CreateLogger<T>() =>
+    public static ILogger<T> CreateLogger<T>() =>
         new RecordingLogger<T>();
 }
