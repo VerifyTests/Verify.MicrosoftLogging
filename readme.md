@@ -17,13 +17,13 @@ https://nuget.org/packages/Verify.MicrosoftLogging/
 ## Usage
 
 <!-- snippet: Enable -->
-<a id='snippet-enable'></a>
+<a id='snippet-Enable'></a>
 ```cs
 [ModuleInitializer]
 public static void Initialize() =>
     VerifyMicrosoftLogging.Initialize();
 ```
-<sup><a href='/src/Tests/ModuleInitializer.cs#L3-L9' title='Snippet source file'>snippet source</a> | <a href='#snippet-enable' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/ModuleInitializer.cs#L3-L9' title='Snippet source file'>snippet source</a> | <a href='#snippet-Enable' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 Logging Recording allows, when a method is being tested, for any [logging](https://docs.microsoft.com/en-us/dotnet/core/extensions/logging) made as part of that method call to be recorded and verified.
 
@@ -32,7 +32,7 @@ Call `LoggerRecording.Start();` to get an instance of the `LoggerProvider`. `Log
 The pass in the `LoggerProvider` instance to a class/method that write log entries:
 
 <!-- snippet: LoggerRecording -->
-<a id='snippet-loggerrecording'></a>
+<a id='snippet-LoggerRecording'></a>
 ```cs
 [Fact]
 public Task Logging()
@@ -60,7 +60,7 @@ class ClassThatUsesLogging(ILogger logger)
     }
 }
 ```
-<sup><a href='/src/Tests/Tests.cs#L49-L77' title='Snippet source file'>snippet source</a> | <a href='#snippet-loggerrecording' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Tests.cs#L49-L77' title='Snippet source file'>snippet source</a> | <a href='#snippet-LoggerRecording' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 Results in:
@@ -96,7 +96,7 @@ Results in:
 A common pattern is to use a type logger (`Logger<T>`). `LoggerProvider` provides a builder method `CreateLogger<T>` to construct a `Logger<T>`:
 
 <!-- snippet: LoggerRecordingTyped -->
-<a id='snippet-loggerrecordingtyped'></a>
+<a id='snippet-LoggerRecordingTyped'></a>
 ```cs
 [Fact]
 public Task LoggingTyped()
@@ -119,7 +119,7 @@ class ClassThatUsesTypedLogging(ILogger<ClassThatUsesTypedLogging> logger)
     }
 }
 ```
-<sup><a href='/src/Tests/Tests.cs#L5-L28' title='Snippet source file'>snippet source</a> | <a href='#snippet-loggerrecordingtyped' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Tests.cs#L5-L28' title='Snippet source file'>snippet source</a> | <a href='#snippet-LoggerRecordingTyped' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 Results in:
