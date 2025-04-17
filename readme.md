@@ -29,7 +29,7 @@ Logging Recording allows, when a method is being tested, for any [logging](https
 
 Call `LoggerRecording.Start();` to get an instance of the `LoggerProvider`. `LoggerProvider` implements both `ILogger` and `ILoggerProvider`.
 
-The pass in the `LoggerProvider` instance to a class/method that write log entries:
+Then pass in the `LoggerProvider` instance to a class/method that write log entries:
 
 <!-- snippet: LoggerRecording -->
 <a id='snippet-LoggerRecording'></a>
