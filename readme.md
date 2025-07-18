@@ -4,7 +4,7 @@
 [![Build status](https://ci.appveyor.com/api/projects/status/nrbwjnwp2id3k7f8?svg=true)](https://ci.appveyor.com/project/SimonCropp/verify-microsoftlogging)
 [![NuGet Status](https://img.shields.io/nuget/v/Verify.MicrosoftLogging.svg)](https://www.nuget.org/packages/Verify.MicrosoftLogging/)
 
-Extends [Verify](https://github.com/VerifyTests/Verify) to allow verification of MicrosoftLogging bits.
+Extends [Verify](https://github.com/VerifyTests/Verify) to allow verification of MicrosoftLogging bits.<!-- singleLineInclude: intro. path: /docs/intro.include.md -->
 
 **See [Milestones](../../milestones?state=closed) for release notes.**
 
@@ -14,9 +14,9 @@ Extends [Verify](https://github.com/VerifyTests/Verify) to allow verification of
 
 ### Entity Framework Extensions<!-- include: zzz. path: /docs/zzz.include.md -->
 
-[Entity Framework Extensions](https://entityframework-extensions.net/) is a major sponsor and is proud to contribute to the development this project.
+[Entity Framework Extensions](https://entityframework-extensions.net/?utm_source=simoncropp&utm_medium=Verify.MicrosoftLogging) is a major sponsor and is proud to contribute to the development this project.
 
-[![Entity Framework Extensions](docs/zzz.png)](https://entityframework-extensions.net)<!-- endInclude -->
+[![Entity Framework Extensions](https://raw.githubusercontent.com/VerifyTests/Verify.MicrosoftLoggin/refs/heads/main/docs/zzz.png)](https://entityframework-extensions.net/?utm_source=simoncropp&utm_medium=Verify.MicrosoftLogging)<!-- endInclude -->
 
 
 ## NuGet
