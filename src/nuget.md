@@ -1,8 +1,8 @@
-[Documentation](https://github.com/VerifyTests/Verify.MicrosoftLoggin)
+[Documentation](https://github.com/VerifyTests/Verify.MicrosoftLogging)
 
 Extends [Verify](https://github.com/VerifyTests/Verify) to allow verification of MicrosoftLogging bits.<!-- singleLineInclude: intro. path: /docs/intro.include.md -->
 
-**See [Milestones](https://github.com/VerifyTests/Verify.MicrosoftLoggin/milestones?state=closed) for release notes.**
+**See [Milestones](https://github.com/VerifyTests/Verify.MicrosoftLogging/milestones?state=closed) for release notes.**
 
 
 ## Sponsors
@@ -12,4 +12,4 @@ Extends [Verify](https://github.com/VerifyTests/Verify) to allow verification of
 
 [Entity Framework Extensions](https://entityframework-extensions.net/?utm_source=simoncropp&utm_medium=Verify.MicrosoftLogging) is a major sponsor and is proud to contribute to the development this project.
 
-[![Entity Framework Extensions](https://raw.githubusercontent.com/VerifyTests/Verify.MicrosoftLoggin/refs/heads/main/docs/zzz.png)](https://entityframework-extensions.net/?utm_source=simoncropp&utm_medium=Verify.MicrosoftLogging)<!-- endInclude -->
+[![Entity Framework Extensions](https://raw.githubusercontent.com/VerifyTests/Verify.MicrosoftLogging/refs/heads/main/docs/zzz.png)](https://entityframework-extensions.net/?utm_source=simoncropp&utm_medium=Verify.MicrosoftLogging)<!-- endInclude -->

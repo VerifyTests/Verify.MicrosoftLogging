@@ -2,4 +2,4 @@
 
 [Entity Framework Extensions](https://entityframework-extensions.net/?utm_source=simoncropp&utm_medium=Verify.MicrosoftLogging) is a major sponsor and is proud to contribute to the development this project.
 
-[![Entity Framework Extensions](https://raw.githubusercontent.com/VerifyTests/Verify.MicrosoftLoggin/refs/heads/main/docs/zzz.png)](https://entityframework-extensions.net/?utm_source=simoncropp&utm_medium=Verify.MicrosoftLogging)
+[![Entity Framework Extensions](https://raw.githubusercontent.com/VerifyTests/Verify.MicrosoftLogging/refs/heads/main/docs/zzz.png)](https://entityframework-extensions.net/?utm_source=simoncropp&utm_medium=Verify.MicrosoftLogging)
