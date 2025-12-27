@@ -1,7 +1,7 @@
 # <img src="/src/icon.png" height="30px"> Verify.MicrosoftLogging
 
 [![Discussions](https://img.shields.io/badge/Verify-Discussions-yellow?svg=true&label=)](https://github.com/orgs/VerifyTests/discussions)
-[![Build status](https://ci.appveyor.com/api/projects/status/nrbwjnwp2id3k7f8?svg=true)](https://ci.appveyor.com/project/SimonCropp/verify-microsoftlogging)
+[![Build status](https://img.shields.io/appveyor/build/SimonCropp/verify-microsoftlogging)](https://ci.appveyor.com/project/SimonCropp/verify-microsoftlogging)
 [![NuGet Status](https://img.shields.io/nuget/v/Verify.MicrosoftLogging.svg)](https://www.nuget.org/packages/Verify.MicrosoftLogging/)
 
 Extends [Verify](https://github.com/VerifyTests/Verify) to allow verification of MicrosoftLogging bits.<!-- singleLineInclude: intro. path: /docs/intro.include.md -->
