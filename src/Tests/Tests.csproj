@@ -8,7 +8,6 @@
   <ItemGroup>
     <PackageReference Include="MarkdownSnippets.MsBuild" PrivateAssets="all" />
     <PackageReference Include="xunit.v3" />
-    <PackageReference Include="xunit.runner.visualstudio" PrivateAssets="all" />
     <PackageReference Include="Verify.XunitV3" />
     <PackageReference Include="Argon" />
     <PackageReference Include="DiffEngine" />
